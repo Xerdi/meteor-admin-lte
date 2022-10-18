@@ -67,7 +67,7 @@ Example of a login page:
 
 At this time there are only structure templates available.
 They use `Template.contentBlock` for separating the view from data.
-There's just one template for the 'login-page' component, namely `wall`.
+There's just one template for the 'login-page' component, namely `wall` and accepts a card as inner content.
 The `adminLte` template, however, has the following extra templates for inner usage:
 
 - `preloader` Takes a boolean `ready` whether to slide up the preloader or not.
