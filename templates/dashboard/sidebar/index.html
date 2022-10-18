@@ -1,0 +1,16 @@
+<template name="sidebar">
+    <aside class="main-sidebar {{classList}}">
+        <a href="/" class="brand-link">
+            <img class="brand-image" src="{{image}}" alt="...">
+            <span class="brand-text font-weight-light">{{#if preTitle}}<b>{{preTitle}}</b>{{/if}}{{title}}</span>
+        </a>
+
+        <div class="sidebar">
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+                    {{> Template.contentBlock}}
+                </ul>
+            </nav>
+        </div>
+    </aside>
+</template>

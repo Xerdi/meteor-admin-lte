@@ -1,0 +1,14 @@
+<template name="wall">
+    <div class="login-box" style="display: none">
+        <div class="login-logo">
+            <a href="#">{{#if preTitle}}<b>{{preTitle}}</b>{{/if}}{{title}}</a>
+        </div>
+
+        <div class="card">
+            <div class="card-body login-card-body">
+                {{> Template.contentBlock}}
+            </div>
+        </div>
+    </div>
+    <div class="toasts-top-right"></div>
+</template>
