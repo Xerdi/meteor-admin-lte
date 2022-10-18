@@ -8,7 +8,7 @@ Package.describe({
 
 Package.onUse(function (api) {
     api.versionsFrom('2.7.3');
-    api.use(['ecmascript', 'blaze-html-templates', 'reactive-dict', 'tmeasday:check-npm-versions']);
+    api.use(['ecmascript', 'blaze-html-templates@1.2.1', 'reactive-dict', 'tmeasday:check-npm-versions@1.0.2']);
     api.mainModule('admin-lte.js', 'client');
     api.mainModule('server.js', 'server');
 });
