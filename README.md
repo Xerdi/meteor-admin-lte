@@ -26,6 +26,9 @@ The package provides all components as templates.
 Example of a full dashboard:
 
 ```handlebars
+{{! Template: banner}}
+{{> brand preTitle='Mijn' title='Portaal' image='path/to/img'}}
+{{! Template: app}}
 {{#adminLte}}
     {{#preloader ready=Template.subscriptionsReady}}
         <img src="/path/to/img" alt="..." height="100" width="100">
@@ -34,8 +37,17 @@ Example of a full dashboard:
         <!-- Add some dropdowns to the right -->
         <!-- ... -->
     {{/header}}
-    {{#sidebar image='path/to/img' preTitle='Mijn' title='Portaal'}}
-        <!-- Add some sidebar menu items -->
+    {{#sidebar brand='banner'
+               username=currentUser.username
+               userAvatar=currentUser.avatar.link
+               userLink='/user/profile'}}
+        {{! Either add username e.t.c. to sidebar or use userMenu}}
+        {{#userMenu name=currentUser.username
+                    avatar=currentUser.avatar.link}}
+            <!-- Add some user menu items or groups -->
+            <!-- ... -->
+        {{/userMenu}}
+        <!-- Add some sidebar menu items or groups -->
         <!-- ... -->
     {{/sidebar}}
     {{#content name=pageName groupName=pageGroupName}}
@@ -72,7 +84,12 @@ The `adminLte` template, however, has the following extra templates for inner us
 
 - `preloader` Takes a boolean `ready` whether to slide up the preloader or not.
 - `header` Only takes menu items in the content block.
-- `sidear` Takes an `image`, `preTitle` and `title` for the branding in the top of the sidebar.
+- `sidear` Takes a template named `brand` and optionally a `username`, `userAvatar` and `userLink` for the `userPanel`.
+    - `brand` Takes a `preTitle`, `title` and `image`.
+    - `menuGroup` Takes `title`, `icon` and `open`, and uses content block for inner items.
+    - `menuItem` Takes `title`, 'icon' and `link`.
+    - `user-menu` Takes `name`, `avatar` and `open`, and uses content block for inner items.
+    - `user-panel` Takes `name`, `avatar` and `link`, and is only used in `sidebar` itself.
 - `content` Takes a `name` and `groupName` for the content header.
 - `footer` Takes any HTML in the content block.
 

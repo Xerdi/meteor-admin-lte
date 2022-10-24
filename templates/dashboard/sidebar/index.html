@@ -1,11 +1,12 @@
 <template name="sidebar">
     <aside class="main-sidebar {{classList}}">
-        <a href="/" class="brand-link">
-            <img class="brand-image" src="{{image}}" alt="...">
-            <span class="brand-text font-weight-light">{{#if preTitle}}<b>{{preTitle}}</b>{{/if}}{{title}}</span>
-        </a>
-
+        {{#if brand}}
+            {{> Template.dynamic template=brand}}
+        {{/if}}
         <div class="sidebar">
+            {{#if username}}
+                {{> userPanel name=username avatar=userAvatar link=userLink}}
+            {{/if}}
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
                     {{> Template.contentBlock}}

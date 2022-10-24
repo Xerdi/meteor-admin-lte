@@ -1,6 +1,12 @@
 import {Template} from "meteor/templating";
 import {Theme} from "meteor/xerdi:admin-lte/helpers";
 
+import './brand';
+import './menu-group';
+import './menu-item';
+import './user-menu';
+import './user-panel';
+
 import './index.html';
 
 Template.sidebar.onRendered(function () {

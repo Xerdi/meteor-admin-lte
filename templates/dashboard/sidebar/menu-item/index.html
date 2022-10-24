@@ -1,0 +1,10 @@
+<template name="menuItem">
+    <li class="nav-item">
+        <a href="{{link}}" class="nav-link {{#if active}}active{{/if}}">
+            {{#if icon}}
+                <i class="nav-icon {{icon}}"></i>
+            {{/if}}
+            <p>{{__ title}}</p>
+        </a>
+    </li>
+</template>

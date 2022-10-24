@@ -1,0 +1,16 @@
+<template name="menuGroup">
+    <li class="nav-item {{#if open}}menu-is-opening menu-open{{/if}}">
+        <a href="#" class="nav-link">
+            {{#if icon}}
+                <i class="nav-icon {{icon}}"></i>
+            {{/if}}
+            <p>
+                {{__ title}}
+                <i class="right fas fa-angle-left"></i>
+            </p>
+        </a>
+        <ul class="nav nav-treeview" style="{{treeViewStyle}}">
+            {{> Template.contentBlock}}
+        </ul>
+    </li>
+</template>

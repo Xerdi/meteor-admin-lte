@@ -1,0 +1,16 @@
+<template name="userMenu">
+    <li class="nav-item user-panel pb-2 {{#if open}}menu-is-opening menu-open{{/if}}">
+        <a href="#" class="nav-link {{#if open}}active{{/if}}"
+           style="padding-left: 12px; margin: 0; line-height: 2.1rem">
+            <img src="{{avatar}}"
+                 class="img-circle elevation-2 avatar" alt="...">
+            <p style="padding-left: 10px; vertical-align: middle">
+                {{name}}
+                <i class="right fas fa-angle-left"></i>
+            </p>
+        </a>
+        <ul class="nav nav-treeview mt-2" style="{{treeViewStyle}}">
+            {{> Template.contentBlock}}
+        </ul>
+    </li>
+</template>
