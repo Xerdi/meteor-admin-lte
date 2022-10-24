@@ -11,7 +11,6 @@ Package.onUse(function (api) {
     api.use([
         'ecmascript',
         'reactive-dict',
-        'universe:i18n',
         'blaze-html-templates@1.2.1',
         'tmeasday:check-npm-versions@1.0.2'
     ]);
