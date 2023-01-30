@@ -1,13 +1,13 @@
 Package.describe({
     name: 'xerdi:admin-lte',
-    version: '0.0.4',
+    version: '0.0.5',
     summary: 'AdminLTE wrapped with Meteor',
     git: 'https://github.com/Xerdi/meteor-admin-lte.git',
     documentation: 'README.md'
 });
 
 Package.onUse(function (api) {
-    api.versionsFrom('2.7.3');
+    api.versionsFrom('2.10.0');
     api.use([
         'ecmascript',
         'reactive-dict',
