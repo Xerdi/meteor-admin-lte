@@ -38,7 +38,7 @@ In this case the example shows a Bash example:
 
 if [ ! -d public/webfonts ]; then
   echo "Linking fontawesome webfonts"
-  ln -s node_modules/@fortawesome/fontawesome-free/webfonts public/webfonts
+  ln -rs node_modules/@fortawesome/fontawesome-free/webfonts public/webfonts
 fi
 ```
 
