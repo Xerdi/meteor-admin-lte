@@ -1,0 +1,38 @@
+@fa-font-path: "/webfonts";
+
+.sidebar ul.nav-sidebar {
+  overflow-x: hidden;
+
+  .nav-item .nav-link > i {
+    display: inline-block;
+    min-width: 24px;
+  }
+}
+
+:root body.dark-mode {
+  --fc-page-bg-color: #454d55;
+  --fc-neutral-bg-color: rgba(0,0,0,0);
+  --fc-list-event-hover-bg-color: #454d55;
+}
+
+.toasts {
+  position: fixed;
+  margin: 1rem;
+  z-index: 9999;
+
+  .top {
+    top: 0;
+  }
+
+  .bottom {
+    bottom: 0;
+  }
+
+  .right {
+    right: 0;
+  }
+
+  .left {
+    left: 0;
+  }
+}

@@ -1,5 +1,6 @@
 // CSS Dependencies
-import 'admin-lte/plugins/fontawesome-free/css/all.min.css'
+import './less/main.less';
+import '@fortawesome/fontawesome-free/less/fontawesome.less';
 import 'admin-lte/plugins/select2/css/select2.min.css';
 import 'admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css';
 import 'admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css';
@@ -8,7 +9,6 @@ import 'admin-lte/plugins/fullcalendar/main.css';
 import 'admin-lte/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css';
 import 'admin-lte/plugins/chart.js/Chart.min.css';
 import 'admin-lte/dist/css/adminlte.min.css';
-import './css/quirks.css';
 
 // JavaScript Dependencies
 require('admin-lte/plugins/jquery/jquery.min');

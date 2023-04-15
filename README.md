@@ -20,6 +20,32 @@ meteor npm install --save \
     bootstrap@^4.6.2
 ```
 
+In order for webfonts of Font Awesome to work we'll need it to be accessible from `/webfonts`.
+This can be done by setting a `postinstall` script in your `package.json`.
+In this case the example shows a Bash example:
+```json
+{
+  "name": "mypackage",
+  ...
+  "scripts": {
+    "postinstall": "./postinstall.sh"
+  },
+  ...
+}
+```
+```bash
+#!/bin/bash
+
+if [ ! -d public/webfonts ]; then
+  echo "Linking fontawesome webfonts"
+  ln -s node_modules/@fortawesome/fontawesome-free/webfonts public/webfonts
+fi
+```
+
+This way after a `meteor npm install` the webfonts will be available at `/webfonts/...`.
+
+<small>Don't forget to give the script execution rights.</small>
+
 ## Usage
 
 The package provides all components as templates.
