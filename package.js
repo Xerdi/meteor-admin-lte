@@ -12,7 +12,7 @@ Package.onUse(function (api) {
         'ecmascript',
         'reactive-dict',
         'blaze-html-templates@1.2.1',
-        'less',
+        'less@1.0.14',
         'tmeasday:check-npm-versions@1.0.2'
     ]);
     api.mainModule('admin-lte.js', 'client');
